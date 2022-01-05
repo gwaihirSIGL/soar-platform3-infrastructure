@@ -35,7 +35,7 @@ resource "aws_rds_cluster" "main" {
     // Save cost when not in use, you may want this
     // to be false in production depending on how often
     // you are querying the database
-    auto_pause = true
+    auto_pause = false
     // just for testing
     min_capacity             = 2
     max_capacity             = 2

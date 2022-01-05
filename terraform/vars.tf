@@ -1,5 +1,5 @@
 variable project_name {
-  default     = "serverless-rds-internet"
+  default     = "serverless-soar"
   description = "The base name of the project"
 }
 

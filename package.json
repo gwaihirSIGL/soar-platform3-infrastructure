@@ -9,6 +9,8 @@
     "destroy:terraform": "cd terraform && terraform destroy -var=\"stage=dev\" && cd ..",
     "lint": "terraform fmt terraform/ && prettier --ignore-path ./.gitignore --write .",
     "test": "cd src && serverless invoke -f hello --stage dev",
+    "test:get": "cd src && serverless invoke -f getUsers --stage dev",
+    "test:post": "cd src && serverless invoke -f getUsers --stage dev",
     "deploy": "cd src && npm i && serverless deploy --stage dev && cd .."
   },
   "keywords": [

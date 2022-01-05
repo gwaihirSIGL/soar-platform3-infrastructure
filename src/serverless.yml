@@ -70,6 +70,12 @@ functions:
   hello:
     handler: handler.hello
     timeout: 30
+  getUsers:
+    handler: handler.getUsers
+    timeout: 30
+  UpdateUsers:
+    handler: handler.UpdateUsers
+    timeout: 30
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
