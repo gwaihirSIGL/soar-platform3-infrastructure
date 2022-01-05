@@ -15,3 +15,4 @@ src/vpc.*.js
 .env.*
 !.env.example
 
+env.yml
