@@ -45,6 +45,7 @@ resource "aws_internet_gateway" "main" {
 
 // NAT gateway requires an elastic ip
 resource "aws_eip" "public" {
+  vpc      = true
   tags = {
     Name = local.tag_name
   }
