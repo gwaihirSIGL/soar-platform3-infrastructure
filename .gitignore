@@ -1,0 +1,17 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# Terraform outputs
+.terraform
+terraform.tfstate
+terraform.tfstate.*
+src/vpc.js
+src/vpc.*.js
+
+.env.*
+!.env.example
+
