@@ -15,24 +15,29 @@ resource "aws_amplify_app" "front_app" {
   platform = "WEB"
 
   build_spec = <<EOF
-    version: 1
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - npm ci
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: build
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
+      version: 1
+      applications:
+      - frontend:
+          phases:
+            preBuild:
+              commands:
+                - cd newSite
+                - npm ci
+            build:
+              commands: []
+          artifacts:
+            baseDirectory: newSite
+            files:
+              - '**/*'
+          cache:
+            paths: []
 
   EOF
+
+  environment_variables = {
+    api_url = aws_api_gateway_deployment.minimal.invoke_url
+  }
+
 
 }
 

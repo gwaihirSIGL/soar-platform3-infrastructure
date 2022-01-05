@@ -17,6 +17,7 @@ resource "aws_security_group_rule" "demo_lambda_sg_allow_redis_ingress" {
   to_port       = 6379
   protocol     = "tcp"
   security_group_id = "${aws_security_group.lambda.id}"
+  cidr_blocks = ["0.0.0.0/0"]
 }
 resource "aws_security_group_rule" "demo_lambda_sg_allow_redis_egress" {
   type            = "egress"
@@ -24,6 +25,7 @@ resource "aws_security_group_rule" "demo_lambda_sg_allow_redis_egress" {
   to_port       = 6379
   protocol     = "tcp"
   security_group_id = "${aws_security_group.lambda.id}"
+  cidr_blocks = ["0.0.0.0/0"]
 }
 
 
